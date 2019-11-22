@@ -13,7 +13,7 @@ import torch.backends.cudnn as cudnn
 from config import config
 from dataloader import get_train_loader
 from network import BiSeNet
-from datasets import Cityscapes
+from datasets import Cityscapes, BSCar
 
 from utils.init_func import init_weight, group_weight
 from utils.pyt_utils import all_reduce_tensor
@@ -42,7 +42,7 @@ with Engine(custom_parser=parser) as engine:
         torch.cuda.manual_seed(seed)
 
     # data loader
-    train_loader, train_sampler = get_train_loader(engine, Cityscapes)
+    train_loader, train_sampler = get_train_loader(engine, BSCar)
 
     # config network and criterion
     min_kept = int(config.batch_size // len(

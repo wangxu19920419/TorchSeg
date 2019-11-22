@@ -1,0 +1,5 @@
+__pycache__
+*.pyc
+furnace/seg_opr/dcn/build/
+furnace/seg_opr/dcn/deform_conv.egg-info/
+furnace/seg_opr/dcn/dist/

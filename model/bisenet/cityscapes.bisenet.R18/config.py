@@ -35,12 +35,19 @@ C.val_log_file = C.log_dir + '/val_' + exp_time + '.log'
 C.link_val_log_file = C.log_dir + '/val_last.log'
 
 """Data Dir and Weight Dir"""
-C.dataset_path = "/root/Source/Datasets/Segmentation/Cityscapes/"
-C.img_root_folder = C.dataset_path
-C.gt_root_folder = C.dataset_path
-C.train_source = osp.join(C.dataset_path, "config_new/train.txt")
-C.eval_source = osp.join(C.dataset_path, "config_new/val.txt")
-C.test_source = osp.join(C.dataset_path, "config_new/test.txt")
+# C.dataset_path = "/root/Source/Datasets/Segmentation/Cityscapes/"
+# C.img_root_folder = C.dataset_path
+# C.gt_root_folder = C.dataset_path
+# C.train_source = osp.join(C.dataset_path, "config_new/train.txt")
+# C.eval_source = osp.join(C.dataset_path, "config_new/val.txt")
+# C.test_source = osp.join(C.dataset_path, "config_new/test.txt")
+# C.is_test = False
+C.dataset_path = "/mnt/cephfs_new_wj/cv/wangxu.ailab/data/car_seg/bytecar_semantic/Segment/"
+C.img_root_folder = osp.join(C.dataset_path, "train_imgs/")
+C.gt_root_folder = osp.join(C.dataset_path, "train_imgs/")
+C.train_source = osp.join(C.dataset_path, "whole_car_seg_train.lst")
+C.eval_source = osp.join(C.dataset_path, "whole_car_seg_test.lst")
+C.test_source = osp.join(C.dataset_path, "whole_car_seg_test.lst")
 C.is_test = False
 
 """Path Config"""
